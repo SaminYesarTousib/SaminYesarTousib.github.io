@@ -1,201 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0e1a2b" />
-  <meta name="description" content="Samin Yesar Tousib — CSE undergraduate and emerging researcher working at the intersection of artificial intelligence, machine learning and computational spectroscopy." />
-  <title>Samin Yesar Tousib | Research & Academic Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081425">
+  <meta name="description" content="Samin Yesar Tousib — Computer Science & Engineering undergraduate exploring AI, privacy-aware machine learning, spectroscopy, and research. An academic portfolio with space for certificates and sports achievements.">
+  <title>Samin Yesar Tousib — Research, Engineering & Beyond</title>
   <style>
-    :root{--ink:#122137;--deep:#0c1829;--muted:#5d697b;--blue:#315ce0;--aqua:#4bc4ba;--gold:#d8a96b;--paper:#f7f8fb;--white:#fff;--line:#e3e8f0;--shadow:0 22px 65px rgba(10,29,54,.09)}
+    :root {
+      --navy:#081425; --navy2:#0c1e36; --slate:#142640; --ink:#17233b;
+      --paper:#f6f8fc; --cream:#fdfcf8; --white:#fff; --muted:#657288;
+      --line:#e0e6f0; --violet:#b4abff; --violet-dark:#665add; --mint:#8be9d7;
+      --blue:#87b6ff; --amber:#f4cc92; --shadow:0 18px 70px rgba(16,31,59,.075);
+    }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:95px}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
+    html{scroll-behavior:smooth;scroll-padding-top:85px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+    ::selection{background:#b9dcfa;color:#071b2f}
+    a{text-decoration:none;color:inherit}
     button{font:inherit}
-    .container{width:min(1160px,calc(100% - 48px));margin:auto}
-    .eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:#4b68ae}
-    .nav{position:sticky;top:0;z-index:20;background:rgba(247,248,251,.95);backdrop-filter:blur(18px);border-bottom:1px solid rgba(219,225,236,.8)}
-    .nav .container{display:flex;align-items:center;justify-content:space-between;gap:25px;height:79px}
-    .brand{display:flex;align-items:center;gap:13px;font-size:.98rem;font-weight:800;letter-spacing:-.03em;white-space:nowrap}
-    .brandmark{width:39px;height:39px;border-radius:12px;color:white;background:#12213d;display:grid;place-items:center;font-size:.75rem;letter-spacing:0;box-shadow:0 5px 12px rgba(16,37,75,.15)}
-    .navlinks{display:flex;align-items:center;gap:29px;font-size:.8rem;font-weight:700;color:#425065}
-    .navlinks a:hover,.textlink:hover{color:var(--blue)}
-    .navcta{background:var(--deep);color:#fff!important;padding:11px 17px;border-radius:9px}
-    .menu-toggle{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--ink)}
-    .hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 30%,#233a62 0%,#101f36 43%,#0c1829 80%);color:#fff}
-    .hero:before{content:"";position:absolute;inset:0;opacity:.16;background-image:linear-gradient(#6b8dc0 1px,transparent 1px),linear-gradient(90deg,#6b8dc0 1px,transparent 1px);background-size:60px 60px;mask-image:linear-gradient(90deg,transparent 10%,#000 100%)}
-    .hero .container{position:relative;display:grid;grid-template-columns:minmax(0,1.18fr) minmax(290px,.82fr);gap:70px;align-items:center;padding:110px 0 116px}
-    .intro-label{display:inline-flex;align-items:center;gap:10px;color:#b7cef3;border:1px solid rgba(189,210,249,.28);border-radius:40px;padding:8px 16px;font-size:.72rem;font-weight:750;letter-spacing:.09em;text-transform:uppercase;background:rgba(255,255,255,.045)}
-    .intro-label:before{content:"";display:block;width:7px;height:7px;background:var(--aqua);border-radius:50%;box-shadow:0 0 0 4px rgba(75,196,186,.13)}
+    img{max-width:100%}
     h1,h2,h3,p{margin-top:0}
-    h1{font-size:clamp(3.2rem,6.3vw,5.5rem);line-height:1.065;letter-spacing:-.07em;font-weight:750;margin:27px 0 26px}
-    h1 span{color:#a5c2ff}
-    .hero-lead{font-size:1.13rem;line-height:1.87;color:#ced9e8;max-width:620px}
-    .hero-lead strong{color:#fff;font-weight:650}
-    .actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 21px;border-radius:10px;font-size:.86rem;font-weight:770;transition:transform .2s,box-shadow .2s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:#b8d0ff;color:#10203b;box-shadow:0 8px 23px rgba(114,156,234,.15)}
-    .btn-outline{border:1px solid #657790;color:#fff}
-    .hero-card{position:relative;border:1px solid rgba(211,227,255,.23);border-radius:21px;padding:33px;background:linear-gradient(155deg,rgba(255,255,255,.10),rgba(255,255,255,.025));box-shadow:0 35px 90px rgba(0,0,0,.16)}
-    .hero-card .card-top{display:flex;align-items:center;gap:17px;padding-bottom:25px;border-bottom:1px solid rgba(255,255,255,.17)}
-    .monogram{display:grid;place-items:center;width:68px;height:68px;flex:none;border-radius:18px;background:linear-gradient(135deg,#99b9ff,#2ec0ba);font-size:1.4rem;color:#10233d;font-weight:850;letter-spacing:-.06em}
-    .identity{font-size:.97rem;font-weight:760;line-height:1.35}
-    .identity small{font-size:.78rem;display:block;font-weight:450;color:#cad9f0;margin-top:6px}
-    .card-label{color:#93add1;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.18em;margin:28px 0 9px}
-    .hero-card p{font-size:.89rem;color:#e6edfb;margin-bottom:0}
-    .research-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-    .research-tags span{border:1px solid rgba(221,234,254,.22);border-radius:8px;padding:5px 11px;font-size:.72rem;color:#d6e4fa;background:rgba(226,241,255,.06)}
-    .sections{padding:94px 0}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:36px}
-    h2{font-size:clamp(2rem,3.2vw,3rem);letter-spacing:-.055em;line-height:1.19;margin:12px 0 0;font-weight:760}
-    .section-note{max-width:465px;color:var(--muted);font-size:.94rem;margin:0}
-    .about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px}
-    .card{background:var(--white);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}
-    .about-copy{padding:39px 42px}
-    .about-copy p{font-size:1.015rem;color:#516075;max-width:760px;margin-bottom:19px}
-    .about-copy p:last-child{margin-bottom:0}
-    .quickfacts{padding:38px 34px}
-    .fact{padding:0 0 19px;margin-bottom:19px;border-bottom:1px solid var(--line)}
-    .fact:last-child{padding-bottom:0;margin-bottom:0;border:0}
-    .fact small{display:block;letter-spacing:.13em;text-transform:uppercase;font-size:.68rem;font-weight:800;color:#6c7a90;margin-bottom:5px}
-    .fact strong{display:block;font-size:.93rem;line-height:1.52}
-    .research-section{background:#eef2f8;border-block:1px solid #e5eaf3}
-    .track-grid{display:grid;grid-template-columns:1fr 1fr;gap:23px}
-    .track{padding:38px;position:relative;overflow:hidden}
-    .track:after{content:"";position:absolute;top:-45px;right:-46px;width:160px;height:160px;border:1px solid #ebeff7;border-radius:50%;pointer-events:none}
-    .track-number{color:#7183a2;font-size:.79rem;letter-spacing:.14em;font-weight:800;margin-bottom:30px}
-    .track h3{font-size:1.6rem;letter-spacing:-.035em;line-height:1.27;margin:0 0 14px}
-    .track p{color:#647085;font-size:.91rem;margin-bottom:23px}
-    .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{display:inline-flex;background:#f1f4fa;border:1px solid #e6ebf3;border-radius:7px;padding:6px 11px;font-size:.77rem;color:#314762;font-weight:620}
-    .work-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
-    .work{padding:29px;min-height:245px;display:flex;flex-direction:column}
-    .work .symbol{font-size:1.6rem;margin-bottom:15px}
-    .work h3{font-size:1.08rem;line-height:1.4;margin:0 0 12px}
-    .work p{font-size:.87rem;color:var(--muted);margin:0 0 19px}
-    .footnote{margin-top:auto;letter-spacing:.1em;font-size:.68rem;text-transform:uppercase;font-weight:800;color:#6a82a8}
-    .publications-section{background:#fff;border-block:1px solid var(--line)}
-    .publication{display:flex;align-items:center;gap:26px;padding:30px 34px;background:#f7f9fc;border:1px solid var(--line);border-radius:16px}
-    .publication-icon{height:58px;width:58px;flex:none;border-radius:14px;background:#e7edfc;color:#2c57ce;display:grid;place-items:center;font-size:1.45rem}
-    .publication h3{font-size:1.05rem;margin-bottom:7px}
-    .publication p{color:var(--muted);font-size:.9rem;margin-bottom:0}
-    .pub-state{margin-left:auto;white-space:nowrap;background:#e8f3ee;color:#206849;border-radius:25px;font-size:.73rem;font-weight:800;padding:6px 12px}
-    .contact{background:#0c1829;color:#fff;padding:86px 0}
-    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-    .contact h2{max-width:690px}
-    .contact p{color:#b8c6d9;font-size:1rem;margin-top:23px;max-width:570px}
-    .socials{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-    .social{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #35465e;border-radius:11px;padding:17px;color:#f5f8ff;font-size:.82rem;font-weight:720;transition:background .2s}
-    .social:hover{background:#1d3049}
-    .social span{color:#a5b9d5;font-size:1rem}
-    .footer{background:#0c1829;border-top:1px solid #27364a;color:#97a9c2;padding:24px 0;font-size:.76rem}
-    .footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-    .textlink{font-weight:750;color:#2f5ada;text-decoration:underline;text-decoration-color:#b7c5ed;text-underline-offset:4px}
-    :focus-visible{outline:3px solid #51beb8;outline-offset:4px}
-    @media(max-width:920px){.navlinks{gap:15px}.hero .container{gap:32px}.work-grid{grid-template-columns:1fr 1fr}.work:last-child{grid-column:span 2}.contact-grid{gap:35px}}
-    @media(max-width:700px){.container{width:min(100% - 34px,1160px)}.nav .container{height:69px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:69px;background:#fff;border-bottom:1px solid var(--line);padding:20px 22px;box-shadow:0 15px 30px rgba(20,39,74,.12);flex-direction:column;align-items:stretch;gap:20px}.navlinks.open{display:flex}.navcta{text-align:center}.hero .container{grid-template-columns:1fr;padding:77px 0 75px}.hero-card{max-width:520px}.sections{padding:68px 0}.section-head{display:block}.section-note{margin-top:15px}.about-grid,.track-grid,.contact-grid,.work-grid{grid-template-columns:1fr}.work:last-child{grid-column:auto}.about-copy,.quickfacts,.track{padding:28px}.contact{padding:69px 0}.publication{align-items:flex-start;flex-wrap:wrap;padding:24px}.pub-state{margin-left:0}}
-    @media(max-width:420px){h1{font-size:3.1rem}.socials{grid-template-columns:1fr}.btn{width:100%}.hero-card{padding:25px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.social{transition:none}}
+    .container{width:min(1176px,calc(100% - 52px));margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:.71rem;font-weight:850;letter-spacing:.19em;text-transform:uppercase;color:var(--violet-dark)}
+    .eyebrow::before{content:"";width:24px;height:2px;background:currentColor;display:inline-block}
+    h2{font-size:clamp(2rem,3.6vw,3.2rem);letter-spacing:-.055em;line-height:1.13;margin:16px 0 0;font-weight:830}
+    .section-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:36px}
+    .section-heading p{margin:0;max-width:435px;color:var(--muted);font-size:.95rem}
+    .section{padding:98px 0}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(249,250,255,.91);border-bottom:1px solid rgba(192,206,230,.65);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+    .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;gap:12px;align-items:center;white-space:nowrap;font-weight:820;letter-spacing:-.035em;font-size:1rem}
+    .brand-avatar{width:44px;height:44px;object-fit:cover;object-position:center 22%;border-radius:13px;border:2px solid white;box-shadow:0 0 0 1px #d5dcea,0 8px 20px rgba(16,44,84,.1)}
+    .nav-links{display:flex;align-items:center;gap:23px;font-size:.795rem;color:#3c4b61;font-weight:740}
+    .nav-links a:hover{color:#6251d4}
+    .nav-links .nav-contact{background:#11213a;color:white;border-radius:11px;padding:11px 16px;box-shadow:0 5px 15px rgba(5,17,37,.11)}
+    .menu-toggle{display:none;cursor:pointer;border:1px solid #dae1ed;border-radius:9px;background:white;font-size:1.35rem;line-height:1;padding:8px 12px;color:#132540}
+
+    /* Atmospheric hero: original CSS artwork, no outside images or libraries. */
+    .hero{color:#f9fbff;position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(120deg,#071322 1%,#112746 53%,#071828 100%)}
+    .hero::before{content:"";position:absolute;inset:-20%;z-index:-2;background:
+      radial-gradient(ellipse 32% 32% at 71% 16%,rgba(150,116,255,.30),transparent 75%),
+      radial-gradient(ellipse 36% 37% at 87% 80%,rgba(40,204,193,.25),transparent 78%),
+      radial-gradient(ellipse 30% 35% at 16% 67%,rgba(68,116,238,.17),transparent 75%);
+      animation:aurora 16s ease-in-out infinite alternate;filter:saturate(1.2)}
+    .hero::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:.14;background-image:linear-gradient(90deg,rgba(190,217,255,.65) 1px,transparent 1px),linear-gradient(rgba(190,217,255,.65) 1px,transparent 1px);background-size:76px 76px;mask-image:linear-gradient(90deg,transparent 5%,#000 85%)}
+    .hero-art{pointer-events:none;position:absolute;inset:0;overflow:hidden;z-index:-1}
+    .hero-art span{position:absolute;display:block;width:750px;height:750px;left:54%;top:-360px;border:1px solid rgba(198,218,251,.13);border-radius:46%;transform:rotate(-22deg)}
+    .hero-art span:nth-child(2){width:630px;height:630px;left:58%;top:-310px;border-color:rgba(125,215,215,.17);transform:rotate(-18deg)}
+    .hero-art span:nth-child(3){width:495px;height:495px;left:63%;top:-250px;border-color:rgba(215,190,255,.17);transform:rotate(15deg)}
+    .hero-content{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr);align-items:center;gap:76px;padding:111px 0 117px;position:relative}
+    .availability{display:inline-flex;gap:12px;align-items:center;border:1px solid rgba(196,220,255,.28);background:rgba(255,255,255,.055);color:#cce0f6;padding:10px 16px;border-radius:100px;font-size:.69rem;font-weight:820;letter-spacing:.15em;text-transform:uppercase}
+    .availability .signal{width:9px;height:9px;flex:none;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px rgba(139,233,215,.13),0 0 25px rgba(139,233,215,.4)}
+    h1{font-size:clamp(3.5rem,6.35vw,6rem);line-height:1.05;letter-spacing:-.08em;font-weight:850;margin:30px 0 28px}
+    h1 .gradient-text{background:linear-gradient(100deg,#a9c9ff 5%,#cbb6ff 67%,#9ce6e2);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-lead{font-size:1.11rem;color:#c9d7eb;line-height:1.92;max-width:650px;margin-bottom:0}
+    .hero-lead strong{font-weight:720;color:#fff}
+    .actions{margin-top:33px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{min-height:49px;display:inline-flex;justify-content:center;align-items:center;gap:14px;border-radius:12px;padding:13px 21px;font-weight:800;font-size:.84rem;transition:transform .23s,box-shadow .23s,background .23s}
+    .btn:hover{transform:translateY(-3px)}
+    .btn-primary{color:#071b34;background:linear-gradient(110deg,#a7caff,#c1b5ff);box-shadow:0 12px 27px rgba(93,100,233,.20)}
+    .btn-outline{color:white;border:1px solid rgba(185,206,236,.4);background:rgba(255,255,255,.035)}
+    .btn-outline:hover{background:rgba(255,255,255,.10)}
+    .hero-foot{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:38px;color:#9eb3d0;font-size:.75rem;font-weight:650}
+    .hero-foot span:not(:last-child):after{content:"•";padding-left:18px;color:#6684a9}
+    .profile-panel{position:relative;padding:32px;border-radius:26px;border:1px solid rgba(215,229,255,.26);background:linear-gradient(148deg,rgba(225,232,255,.14),rgba(30,51,84,.22) 45%,rgba(11,35,50,.35));box-shadow:0 34px 90px rgba(3,10,23,.27);backdrop-filter:blur(12px)}
+    .profile-panel::after{content:"";position:absolute;right:-18px;bottom:-16px;width:110px;height:110px;border:1px solid rgba(210,231,255,.24);border-radius:24px;transform:rotate(11deg);z-index:-1}
+    .profile-head{display:flex;gap:26px;align-items:center;border-bottom:1px solid rgba(225,236,255,.2);padding-bottom:30px}
+    .profile-halo{padding:5px;border-radius:24px;background:linear-gradient(125deg,rgba(193,179,255,.86),rgba(123,229,216,.89));flex:none;box-shadow:0 12px 33px rgba(67,131,205,.17)}
+    .profile-photo{display:block;width:157px;height:169px;object-fit:cover;object-position:center 24%;border-radius:20px;background:#d8deeb}
+    .profile-title{font-size:1.2rem;font-weight:790;line-height:1.3;letter-spacing:-.025em}
+    .profile-subtitle{display:block;margin-top:8px;color:#c6d8ed;font-size:.82rem}
+    .profile-mini{display:block;margin-top:13px;color:#95ebd9;font-size:.7rem;font-weight:750;letter-spacing:.06em}
+    .panel-label{margin:29px 0 10px;color:#b2baff;font-size:.7rem;letter-spacing:.17em;text-transform:uppercase;font-weight:870}
+    .profile-panel p{margin:0;color:#d6e4f5;font-size:.93rem}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+    .tags span{font-size:.7rem;color:#e2eaf9;border:1px solid rgba(216,231,255,.25);background:rgba(235,242,255,.06);padding:7px 10px;border-radius:8px}
+    .trust-strip{background:#eaf0fb;border-bottom:1px solid #dce5f3}
+    .trust-inner{min-height:96px;display:grid;grid-template-columns:repeat(3,1fr);gap:25px;align-items:center}
+    .trust-item{display:flex;gap:14px;align-items:center;font-size:.84rem;color:#344563;font-weight:770}
+    .trust-item .number{color:#7465e2;font-size:1.38rem;font-weight:830}
+    .trust-item small{display:block;color:#647287;font-weight:540;font-size:.76rem}
+
+    .about{background:linear-gradient(150deg,#fbfcff 55%,#f4f6fd)}
+    .about-grid{display:grid;grid-template-columns:1.27fr .73fr;gap:24px}
+    .surface{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+    .about-story{padding:38px 43px}
+    .about-story p{font-size:1.015rem;color:#526179;margin-bottom:19px;line-height:1.86}
+    .about-story p:last-child{margin-bottom:0}
+    .quote-mark{color:#8272df;font-size:2.2rem;font-weight:850;line-height:.8;margin-bottom:24px}
+    .facts{padding:36px 34px;background:linear-gradient(145deg,#fff,#f8f7ff)}
+    .fact{padding-bottom:19px;margin-bottom:19px;border-bottom:1px solid #e5e7f0}
+    .fact:last-child{padding:0;margin:0;border:none}
+    .fact small{font-weight:850;font-size:.68rem;color:#8c87a3;letter-spacing:.17em;text-transform:uppercase;display:block;margin-bottom:7px}
+    .fact strong{font-size:.94rem;line-height:1.5;display:block;color:#24324b}
+
+    .research{position:relative;isolation:isolate;overflow:hidden;background:#0d1d36;color:#fff}
+    .research::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 4% 3%,rgba(108,91,219,.18),transparent 60%),radial-gradient(ellipse at 90% 95%,rgba(41,197,186,.16),transparent 55%)}
+    .research .eyebrow{color:#b8b0ff}
+    .research .section-heading p{color:#b2c0d5}
+    .research-grid{display:grid;grid-template-columns:1fr 1fr;gap:23px}
+    .research-card{position:relative;padding:38px;border-radius:21px;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.045));border:1px solid rgba(219,231,255,.19);transition:transform .26s,border .26s}
+    .research-card:hover{transform:translateY(-5px);border-color:rgba(221,232,255,.4)}
+    .research-card::after{content:"";position:absolute;width:210px;height:210px;border:1px solid rgba(200,222,255,.15);border-radius:50%;top:-80px;right:-73px;box-shadow:0 0 0 35px rgba(200,222,255,.025),0 0 0 70px rgba(200,222,255,.022);pointer-events:none}
+    .research-kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.16em;font-weight:840;color:#a69fff;margin-bottom:34px}
+    .research-card:nth-child(2) .research-kicker{color:#8fe6d1}
+    .research-card h3{font-size:1.75rem;line-height:1.25;letter-spacing:-.035em;margin-bottom:13px}
+    .research-card p{font-size:.9rem;color:#bccbdd;max-width:425px;margin-bottom:25px}
+    .chip-row{display:flex;gap:8px;flex-wrap:wrap}
+    .chip-row span{display:inline-block;padding:7px 11px;border-radius:7px;color:#e4ecfa;background:rgba(220,232,252,.09);border:1px solid rgba(218,233,255,.14);font-size:.73rem;font-weight:630}
+
+    .projects{background:#f7f9fd}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .project-card{padding:30px;min-height:265px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+    .project-card:hover{transform:translateY(-5px);box-shadow:0 25px 65px rgba(26,45,83,.13)}
+    .project-icon{display:grid;place-items:center;width:50px;height:50px;border-radius:14px;font-size:1.6rem;margin-bottom:30px;background:#f0edff;color:#685dd5}
+    .project-card:nth-child(2) .project-icon{background:#e8f9f7;color:#188f86}
+    .project-card:nth-child(3) .project-icon{background:#fff2e0;color:#bc7e37}
+    .project-card h3{font-size:1.17rem;letter-spacing:-.023em;margin:0 0 12px}
+    .project-card p{font-size:.89rem;color:var(--muted);margin:0 0 25px}
+    .small-caption{font-size:.69rem;letter-spacing:.1em;font-weight:800;text-transform:uppercase;color:#8a81bd;margin-top:auto}
+
+    .credentials{position:relative;background:linear-gradient(180deg,#f1f1ff 0%,#f8faff 100%);overflow:hidden}
+    .credentials::before{content:"";position:absolute;width:450px;height:450px;right:-190px;top:-170px;border:1px solid #ddd8fb;border-radius:50%;box-shadow:0 0 0 65px rgba(187,171,247,.05),0 0 0 130px rgba(187,171,247,.04);pointer-events:none}
+    .credentials-grid{display:grid;grid-template-columns:1fr 1fr;gap:23px;position:relative}
+    .credential-card{min-height:300px;padding:33px 34px;border-radius:21px;position:relative;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid #dedff4;box-shadow:0 15px 45px rgba(53,43,111,.065)}
+    .credential-card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#8178ea,#82cce1)}
+    .credential-card:nth-child(2)::before{background:linear-gradient(90deg,#e9b46b,#9c8ff0)}
+    .credential-head{display:flex;align-items:center;gap:15px;margin-bottom:15px}
+    .credential-icon{display:grid;place-items:center;flex:none;width:52px;height:52px;border-radius:15px;background:#f1efff;color:#7563d8;font-size:1.55rem}
+    .credential-card:nth-child(2) .credential-icon{color:#a06f2e;background:#fff2dc}
+    .credential-card h3{font-size:1.24rem;letter-spacing:-.028em;margin:0}
+    .credential-card p{font-size:.9rem;color:var(--muted);max-width:450px;margin-bottom:22px}
+    .empty-state{margin-top:auto;border:1px dashed #cbd1ea;background:linear-gradient(105deg,#f9faff,#fcfdff);border-radius:12px;padding:18px;display:flex;align-items:center;gap:13px}
+    .empty-state .placeholder-icon{width:34px;height:40px;flex:none;display:grid;place-items:center;color:#8378d1;background:#eeebfc;border-radius:7px;font-size:1rem}
+    .empty-state strong{display:block;font-size:.86rem;color:#3b4261}
+    .empty-state small{display:block;margin-top:2px;font-size:.76rem;color:#79839a;line-height:1.45}
+    .credentials-tip{position:relative;margin-top:24px;display:flex;align-items:center;gap:12px;color:#595a7d;font-size:.82rem}
+    .credentials-tip span{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#e2defe;color:#5f58ab;font-weight:850;flex:none}
+
+    .sports{background:#fff}
+    .sports-layout{display:grid;grid-template-columns:.84fr 1.16fr;gap:27px}
+    .sports-feature{position:relative;isolation:isolate;overflow:hidden;min-height:320px;padding:40px;border-radius:22px;color:white;background:linear-gradient(140deg,#172849,#1d2b4d 46%,#315a67)}
+    .sports-feature:before{content:"";position:absolute;z-index:-1;inset:0;opacity:.85;background:radial-gradient(circle at 90% 85%,rgba(178,199,249,.34),transparent 45%),radial-gradient(circle at 10% 10%,rgba(111,231,212,.18),transparent 45%)}
+    .sports-feature:after{content:"";position:absolute;border:1px solid rgba(207,229,255,.2);border-radius:50%;height:390px;width:390px;right:-150px;bottom:-160px;box-shadow:0 0 0 45px rgba(191,215,250,.04),0 0 0 95px rgba(191,215,250,.026)}
+    .sports-feature .badge{display:inline-block;color:#b2f8e5;border:1px solid rgba(154,235,214,.36);border-radius:100px;padding:6px 12px;font-size:.69rem;letter-spacing:.13em;font-weight:840;text-transform:uppercase;margin-bottom:55px}
+    .sports-feature h3{font-size:2.1rem;line-height:1.18;letter-spacing:-.06em;max-width:380px;margin-bottom:16px}
+    .sports-feature p{color:#c8d9ea;margin:0;max-width:370px;font-size:.92rem}
+    .sports-skills{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .skill-card{border:1px solid #e2e8f1;background:#f9fbff;border-radius:17px;padding:26px;min-height:144px;transition:transform .22s,border-color .22s}
+    .skill-card:hover{transform:translateY(-3px);border-color:#bbbaf1}
+    .skill-card .skill-index{font-size:.69rem;letter-spacing:.15em;font-weight:850;color:#8577dc;margin-bottom:18px}
+    .skill-card h3{font-size:1rem;margin:0 0 6px}
+    .skill-card p{font-size:.81rem;color:#718096;margin:0;line-height:1.6}
+
+    .publications{background:#f6f8fc}
+    .publication{padding:28px;display:flex;align-items:center;gap:21px}
+    .pub-icon{height:54px;width:54px;border-radius:15px;display:grid;place-items:center;flex:none;background:#e9ebfe;color:#6556d1;font-size:1.4rem}
+    .publication h3{margin:0 0 6px;font-size:1.08rem}
+    .publication p{color:var(--muted);font-size:.88rem;margin:0}
+    .status{white-space:nowrap;margin-left:auto;padding:8px 13px;border-radius:50px;color:#5b4f9d;background:#efedff;font-size:.71rem;font-weight:850}
+
+    .contact{position:relative;overflow:hidden;background:#081425;color:#fff;padding:96px 0}
+    .contact::before{content:"";position:absolute;inset:0;opacity:.9;background:radial-gradient(ellipse at 86% 10%,rgba(116,102,220,.19),transparent 54%),radial-gradient(ellipse at 8% 95%,rgba(55,193,173,.15),transparent 51%)}
+    .contact-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+    .contact .eyebrow{color:#b6acff}
+    .contact h2{font-size:clamp(2.1rem,3.9vw,3.35rem)}
+    .contact p{color:#b9cce2;margin:22px 0 0;max-width:530px}
+    .social-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+    .social{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid rgba(219,231,255,.22);background:rgba(255,255,255,.045);border-radius:12px;padding:17px 16px;font-size:.85rem;font-weight:750;transition:background .2s,transform .2s}
+    .social:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+    .social span{font-size:1.1rem;color:#aebcf4}
+    .footer{padding:24px 0;background:#081425;border-top:1px solid #24354e;color:#a1b3ce;font-size:.77rem}
+    .footer .container{display:flex;justify-content:space-between;gap:17px;flex-wrap:wrap}
+    :focus-visible{outline:3px solid #68d6c9;outline-offset:3px}
+    @keyframes aurora{0%{transform:translate(-3%,0) rotate(-7deg) scale(1)}50%{transform:translate(1%,2%) rotate(3deg) scale(1.08)}100%{transform:translate(4%,-3%) rotate(-3deg) scale(.98)}}
+    @media(max-width:1100px){.nav-links{gap:13px;font-size:.75rem}.hero-content{gap:35px}.profile-head{gap:16px}.profile-photo{width:125px;height:140px}}
+    @media(max-width:930px){.nav-inner{height:71px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:71px;left:0;right:0;background:rgba(250,251,255,.98);padding:24px 26px;flex-direction:column;align-items:stretch;gap:21px;box-shadow:0 20px 30px rgba(12,29,55,.16)}.nav-links.open{display:flex}.nav-contact{text-align:center}.hero-content{gap:35px;grid-template-columns:1fr 1fr}.profile-head{flex-direction:column;align-items:flex-start}.profile-photo{width:148px;height:152px}.project-grid{grid-template-columns:1fr 1fr}.project-grid article:last-child{grid-column:span 2}.contact-grid{gap:33px}}
+    @media(max-width:720px){.container{width:min(100% - 34px,1176px)}.section{padding:72px 0}.section-heading{align-items:flex-start;flex-direction:column;gap:14px}.hero-content{grid-template-columns:1fr;padding:75px 0 80px}.hero-content h1{font-size:clamp(3.5rem,12vw,5.5rem)}.profile-head{flex-direction:row;align-items:center}.profile-photo{width:136px;height:142px}.about-grid,.research-grid,.credentials-grid,.sports-layout,.contact-grid{grid-template-columns:1fr}.trust-inner{grid-template-columns:1fr 1fr;gap:17px;padding:22px 0}.trust-item:last-child{grid-column:span 2}.about-story,.facts,.research-card,.credential-card{padding:28px}.sports-feature{min-height:275px;padding:30px}.contact{padding:76px 0}.publication{flex-wrap:wrap}.status{margin-left:0}}
+    @media(max-width:480px){h1{font-size:clamp(2.7rem,12vw,3.4rem)!important}.brand{font-size:.82rem}.brand-avatar{width:40px;height:40px}.actions .btn{width:100%}.profile-panel{padding:22px}.profile-head{gap:14px}.profile-photo{width:110px;height:124px}.profile-title{font-size:1.02rem}.profile-subtitle{font-size:.73rem}.trust-inner{grid-template-columns:1fr}.trust-item:last-child{grid-column:auto}.project-grid,.sports-skills,.social-grid{grid-template-columns:1fr}.project-grid article:last-child{grid-column:auto}.sports-feature .badge{margin-bottom:35px}.social-grid .social{min-height:50px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::before{animation:none}.btn,.project-card,.research-card,.social,.skill-card{transition:none}}
   </style>
 </head>
 <body>
   <header class="nav">
-    <div class="container">
-      <a class="brand" href="#home" aria-label="Samin Yesar Tousib home"><span class="brandmark">SYT</span> Samin Yesar Tousib</a>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navlinks">☰</button>
-      <nav class="navlinks" id="navlinks" aria-label="Main navigation">
-        <a href="#about">About</a><a href="#research">Research</a><a href="#work">Focus Areas</a><a href="#publications">Publications</a><a class="navcta" href="#contact">Contact ↗</a>
+    <div class="container nav-inner">
+      <!-- PHOTO: this image is already in your GitHub repository. Keep its name exactly the same. -->
+      <a href="#home" class="brand" aria-label="Samin Yesar Tousib home">
+        <img class="brand-avatar" src="IMG_20251101_181229-01-01.jpeg" alt="" width="44" height="44">
+        <span>Samin Yesar Tousib</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Focus</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#sports">Sports</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact" class="nav-contact">Contact ↗</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="container">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="container hero-content">
         <div>
-          <div class="intro-label">Academic & Research Portfolio</div>
-          <h1>Samin Yesar<br /><span>Tousib.</span></h1>
-          <p class="hero-lead"><strong>Computer Science & Engineering undergraduate</strong> at Pabna University of Science and Technology, Bangladesh. Exploring the intersection of <strong>intelligent systems, privacy-aware machine learning, and computational sensing.</strong></p>
-          <div class="actions"><a href="#research" class="btn btn-primary">Explore research interests <span aria-hidden="true">↗</span></a><a href="#contact" class="btn btn-outline">Connect with me <span aria-hidden="true">→</span></a></div>
+          <div class="availability"><span class="signal"></span> Research · Engineering · Athletics</div>
+          <h1 id="hero-title">Samin Yesar<br><span class="gradient-text">Tousib.</span></h1>
+          <p class="hero-lead"><strong>Computer Science & Engineering undergraduate</strong> at Pabna University of Science and Technology, Bangladesh. Exploring <strong>intelligent systems, privacy-aware machine learning, and computational sensing</strong> — with a passion for sports and personal growth.</p>
+          <div class="actions"><a class="btn btn-primary" href="#research">Explore research interests <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#certificates">View credentials <span aria-hidden="true">→</span></a></div>
+          <div class="hero-foot"><span>Based in Bangladesh</span><span>CSE · PUST</span><span>Research-minded & multidisciplinary</span></div>
         </div>
-        <aside class="hero-card" aria-label="Academic profile summary">
-          <div class="card-top"><img src="IMG_20251101_181229-01-01.jpeg" alt="Portrait of Samin Yesar Tousib" width="68" height="68" style="width:68px;height:68px;object-fit:cover;object-position:center 22%;border-radius:18px;flex:none;border:1px solid rgba(255,255,255,.28)" loading="eager" /><div class="identity">Samin Yesar Tousib<small>CSE Undergraduate · PUST</small></div></div>
-          <div class="card-label">Academic direction</div>
-          <p>Learning, researching and building at the intersection of computing and real-world scientific challenges.</p>
-          <div class="card-label">Core interests</div>
-          <div class="research-tags"><span>Artificial Intelligence</span><span>Federated Learning</span><span>Computer Vision</span><span>Spectroscopy</span><span>Signal Processing</span></div>
+        <aside class="profile-panel" aria-label="Academic profile summary">
+          <div class="profile-head">
+            <div class="profile-halo"><img class="profile-photo" src="IMG_20251101_181229-01-01.jpeg" alt="Samin Yesar Tousib portrait" width="157" height="169"></div>
+            <div><div class="profile-title">Samin Yesar Tousib</div><span class="profile-subtitle">CSE Undergraduate<br>Pabna University of Science and Technology</span><span class="profile-mini">LEARNING · BUILDING · EXPLORING</span></div>
+          </div>
+          <div class="panel-label">Academic direction</div>
+          <p>Exploring how computing can address scientific questions and real-world engineering challenges.</p>
+          <div class="panel-label">Core interests</div>
+          <div class="tags"><span>Artificial Intelligence</span><span>Federated Learning</span><span>Computer Vision</span><span>Spectroscopy</span><span>Signal Processing</span></div>
         </aside>
       </div>
     </section>
 
-    <section class="sections" id="about">
+    <div class="trust-strip" aria-label="Profile highlights"><div class="container trust-inner">
+      <div class="trust-item"><span class="number">01</span><div>Academic home<small>PUST · Computer Science & Engineering</small></div></div>
+      <div class="trust-item"><span class="number">02</span><div>Research directions<small>Intelligent Systems + Scientific Sensing</small></div></div>
+      <div class="trust-item"><span class="number">03</span><div>Beyond the classroom<small>Sports · Teamwork · Continuous Learning</small></div></div>
+    </div></div>
+
+    <section class="section about" id="about">
       <div class="container">
-        <div class="section-head"><div><div class="eyebrow">01 / About</div><h2>Curiosity with purpose.</h2></div><p class="section-note">A student-led research journey rooted in computer science, interdisciplinary thinking, and continuous learning.</p></div>
+        <div class="section-heading"><div><div class="eyebrow">01 / About me</div><h2>A curious mind.<br>A broader perspective.</h2></div><p>My academic interests are grounded in computer science, while collaboration and sports shape how I learn and grow.</p></div>
         <div class="about-grid">
-          <div class="card about-copy">
-            <p>I am <strong>Samin Yesar Tousib</strong>, an undergraduate student in the Department of Computer Science and Engineering at <strong>Pabna University of Science and Technology (PUST)</strong>, Bangladesh.</p>
-            <p>My academic interests center on artificial intelligence and machine learning, especially their use in privacy-aware systems, visual understanding, spectroscopy and sensor data analysis. I am interested in connecting computational methods with practical scientific problems.</p>
-            <p>Outside academics, I value sports, teamwork, problem-solving, and opportunities to grow through collaboration.</p>
-          </div>
-          <aside class="card quickfacts">
-            <div class="fact"><small>Institution</small><strong>Pabna University of Science and Technology (PUST)</strong></div>
-            <div class="fact"><small>Discipline</small><strong>Computer Science & Engineering</strong></div>
-            <div class="fact"><small>Academic level</small><strong>Undergraduate</strong></div>
-            <div class="fact"><small>Location</small><strong>Bangladesh (UTC+06:00)</strong></div>
-          </aside>
+          <article class="surface about-story"><div class="quote-mark" aria-hidden="true">“</div><p>I am <strong>Samin Yesar Tousib</strong>, an undergraduate student in the Department of Computer Science and Engineering at <strong>Pabna University of Science and Technology (PUST)</strong>, Bangladesh.</p><p>My interests include artificial intelligence, federated learning, computer vision, and computational approaches to spectroscopy and sensor data. I enjoy exploring how intelligent systems may help solve applied science and engineering problems.</p><p>Beyond academics, sports are an important part of my life. They inspire teamwork, determination, and a commitment to improving with every challenge.</p></article>
+          <aside class="surface facts"><div class="fact"><small>University</small><strong>Pabna University of Science and Technology</strong></div><div class="fact"><small>Department</small><strong>Computer Science & Engineering</strong></div><div class="fact"><small>Current stage</small><strong>Undergraduate student</strong></div><div class="fact"><small>Location</small><strong>Pabna, Bangladesh</strong></div></aside>
         </div>
       </div>
     </section>
 
-    <section class="sections research-section" id="research">
+    <section class="section research" id="research">
       <div class="container">
-        <div class="section-head"><div><div class="eyebrow">02 / Research interests</div><h2>Two connected directions.</h2></div><p class="section-note">A focus on machine intelligence, with an interest in both core AI methods and interdisciplinary scientific applications.</p></div>
-        <div class="track-grid">
-          <article class="card track"><div class="track-number">RESEARCH TRACK 01</div><h3>AI & Intelligent Systems</h3><p>Understanding and applying machine learning techniques for intelligent, robust and privacy-conscious computational systems.</p><div class="chips"><span class="chip">Artificial Intelligence</span><span class="chip">Machine Learning</span><span class="chip">Deep Learning</span><span class="chip">Federated Learning</span><span class="chip">Computer Vision</span><span class="chip">Privacy-Preserving ML</span></div></article>
-          <article class="card track"><div class="track-number">RESEARCH TRACK 02</div><h3>AI for Spectroscopy & Sensing</h3><p>Exploring data-driven analysis of spectral signals and scientific measurements through computational methods.</p><div class="chips"><span class="chip">Spectroscopy</span><span class="chip">Spectral Data Analysis</span><span class="chip">Computational Spectroscopy</span><span class="chip">Signal Processing</span><span class="chip">AI-Based Sensor Analysis</span></div></article>
+        <div class="section-heading"><div><div class="eyebrow">02 / Research interests</div><h2>Research across disciplines.</h2></div><p>Two interconnected areas — learning intelligent computational methods and exploring their scientific applications.</p></div>
+        <div class="research-grid">
+          <article class="research-card"><div class="research-kicker">RESEARCH TRACK 01 / INTELLIGENT COMPUTING</div><h3>AI & Intelligent Systems</h3><p>Learning and investigating machine intelligence with attention to robust, distributed, and privacy-conscious approaches.</p><div class="chip-row"><span>Artificial Intelligence</span><span>Machine Learning</span><span>Deep Learning</span><span>Federated Learning</span><span>Computer Vision</span><span>Privacy-Preserving ML</span></div></article>
+          <article class="research-card"><div class="research-kicker">RESEARCH TRACK 02 / SCIENTIFIC COMPUTING</div><h3>AI for Spectroscopy & Sensing</h3><p>Exploring computation for measurements and signals, from spectral data analysis to machine learning for sensor applications.</p><div class="chip-row"><span>Spectroscopy</span><span>Spectral Data Analysis</span><span>Computational Spectroscopy</span><span>Signal Processing</span><span>AI-Based Sensor Analysis</span></div></article>
         </div>
       </div>
     </section>
 
-    <section class="sections" id="work">
+    <section class="section projects" id="projects">
       <div class="container">
-        <div class="section-head"><div><div class="eyebrow">03 / Areas of exploration</div><h2>Ideas worth investigating.</h2></div><p class="section-note">These are current areas of interest, not claims of completed projects. Specific research and project case studies can be added here over time.</p></div>
-        <div class="work-grid">
-          <article class="card work"><div class="symbol" aria-hidden="true">◈</div><h3>Privacy-aware learning</h3><p>Federated and privacy-preserving approaches to building useful machine learning systems.</p><div class="footnote">Learning focus</div></article>
-          <article class="card work"><div class="symbol" aria-hidden="true">◎</div><h3>Visual intelligence</h3><p>Deep learning and computer vision methods for understanding complex visual information.</p><div class="footnote">Learning focus</div></article>
-          <article class="card work"><div class="symbol" aria-hidden="true">⌁</div><h3>Spectral & sensor analytics</h3><p>Machine learning, signal processing and scientific computing for spectroscopy-related data.</p><div class="footnote">Learning focus</div></article>
+        <div class="section-heading"><div><div class="eyebrow">03 / Areas of exploration</div><h2>Questions worth pursuing.</h2></div><p>These are learning and research interests. Verified project details and outcomes can be added as separate case studies.</p></div>
+        <div class="project-grid">
+          <article class="surface project-card"><div class="project-icon" aria-hidden="true">◈</div><h3>Privacy-aware learning</h3><p>Federated and privacy-preserving approaches to distributed intelligence.</p><span class="small-caption">Area of interest</span></article>
+          <article class="surface project-card"><div class="project-icon" aria-hidden="true">◎</div><h3>Visual intelligence</h3><p>Deep learning and computer vision for visual understanding.</p><span class="small-caption">Area of interest</span></article>
+          <article class="surface project-card"><div class="project-icon" aria-hidden="true">⌁</div><h3>Spectral & sensor analytics</h3><p>Signal processing and machine learning applied to scientific data.</p><span class="small-caption">Area of interest</span></article>
         </div>
       </div>
     </section>
 
-    <section class="sections publications-section" id="publications">
+    <!-- CERTIFICATES: real titles, issuers, dates, and files can replace these intentionally neutral empty states. -->
+    <section class="section credentials" id="certificates">
       <div class="container">
-        <div class="section-head"><div><div class="eyebrow">04 / Publications</div><h2>Academic contributions.</h2></div><p class="section-note">Publication details will be listed with accurate titles, author names, venue information, and links when available.</p></div>
-        <div class="publication"><div class="publication-icon" aria-hidden="true">↗</div><div><h3>Publication details coming soon</h3><p>A recently published paper will be listed here after its official bibliographic details and online record are available.</p></div><span class="pub-state">Update pending</span></div>
+        <div class="section-heading"><div><div class="eyebrow">04 / Credentials & recognition</div><h2>Learning, backed by evidence.</h2></div><p>A dedicated space for authenticated academic certificates, training, competition awards, and sports achievements.</p></div>
+        <div class="credentials-grid">
+          <article class="credential-card"><div class="credential-head"><div class="credential-icon" aria-hidden="true">✧</div><h3>Academic & Research Certificates</h3></div><p>Courses, workshops, contests, research programs, and academic recognition belong here once their details are confirmed.</p><div class="empty-state"><span class="placeholder-icon" aria-hidden="true">▤</span><div><strong>Certificate gallery — to be added</strong><small>Add certificate title, issuing organization, year, and proof (image or PDF).</small></div></div></article>
+          <article class="credential-card"><div class="credential-head"><div class="credential-icon" aria-hidden="true">★</div><h3>Sports Certificates & Awards</h3></div><p>A showcase for verified athletic participation, competition results, medals, and team achievements.</p><div class="empty-state"><span class="placeholder-icon" aria-hidden="true">♧</span><div><strong>Sports records — to be added</strong><small>Add the sport, event, award or role, year, and certificate or photo.</small></div></div></article>
+        </div>
+        <div class="credentials-tip"><span aria-hidden="true">i</span> Certificate records will be added with the original titles, dates, and supporting documents.</div>
+      </div>
+    </section>
+
+    <section class="section sports" id="sports">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">05 / Beyond research</div><h2>The athlete's mindset.</h2></div><p>Sports are part of my story: curiosity and discipline in research, collaboration and resilience beyond the classroom.</p></div>
+        <div class="sports-layout">
+          <div class="sports-feature"><div class="badge">Sport · Discipline · Growth</div><h3>Striving for progress, on and off the field.</h3><p>My sports activities are a part of my personal development alongside computing and research.</p></div>
+          <div class="sports-skills"><div class="skill-card"><div class="skill-index">01 / MINDSET</div><h3>Discipline</h3><p>Building consistency through practice and commitment.</p></div><div class="skill-card"><div class="skill-index">02 / PEOPLE</div><h3>Teamwork</h3><p>Learning to collaborate and support shared goals.</p></div><div class="skill-card"><div class="skill-index">03 / CHALLENGES</div><h3>Resilience</h3><p>Staying focused when facing setbacks and competition.</p></div><div class="skill-card"><div class="skill-index">04 / GROWTH</div><h3>Sportsmanship</h3><p>Valuing fairness, respect, and continuous improvement.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section publications" id="publications">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">06 / Publications</div><h2>Academic contributions.</h2></div><p>Precise authorship, paper titles, and venue details will be displayed here once confirmed.</p></div>
+        <div class="surface publication"><div class="pub-icon" aria-hidden="true">↗</div><div><h3>Publication record to be added</h3><p>A publication has been reported; its title, coauthors, and venue details will be added after verification.</p></div><span class="status">Details pending</span></div>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div class="container contact-grid">
-        <div><div class="eyebrow" style="color:#9cbaff">05 / Contact & academic profiles</div><h2>Open to thoughtful conversations and collaboration.</h2><p>Interested in research, interdisciplinary learning, and opportunities to connect with academic communities.</p><div class="actions"><a class="btn btn-primary" href="mailto:samin.y.tousib@gmail.com">Send an email ↗</a></div></div>
-        <div class="socials" aria-label="External profile links">
-          <a class="social" href="https://github.com/SaminYesarTousib" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
-          <a class="social" href="https://orcid.org/0009-0007-6587-5181" target="_blank" rel="noopener noreferrer">ORCID <span>↗</span></a>
-          <a class="social" href="https://www.linkedin.com/in/samin-yesar-tousib-77a2183b0/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
-          <a class="social" href="https://www.researchgate.net/profile/Samin-Tousib" target="_blank" rel="noopener noreferrer">ResearchGate <span>↗</span></a>
-        </div>
+        <div><div class="eyebrow">07 / Contact</div><h2>Good work starts with a conversation.</h2><p>Open to thoughtful academic discussions, interdisciplinary learning, and opportunities for collaboration.</p><div class="actions"><a href="mailto:samin.y.tousib@gmail.com" class="btn btn-primary">Send an email <span aria-hidden="true">↗</span></a></div></div>
+        <div class="social-grid" aria-label="Academic and social profile links"><a class="social" href="https://github.com/SaminYesarTousib" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a class="social" href="https://orcid.org/0009-0007-6587-5181" target="_blank" rel="noopener noreferrer">ORCID <span>↗</span></a><a class="social" href="https://www.linkedin.com/in/samin-yesar-tousib-77a2183b0/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a><a class="social" href="https://www.researchgate.net/profile/Samin-Tousib" target="_blank" rel="noopener noreferrer">ResearchGate <span>↗</span></a></div>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="container"><span>© <span id="year"></span> Samin Yesar Tousib · Academic & Research Portfolio</span><span>Designed for clarity, curiosity & collaboration.</span></div></footer>
+  <footer class="footer"><div class="container"><span>© <span id="year">2026</span> Samin Yesar Tousib · Research & Academic Portfolio</span><span>Built with curiosity, purpose and consistency.</span></div></footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle=document.querySelector('.menu-toggle');
-    const nav=document.querySelector('.navlinks');
-    toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'});
-    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));
+    const menuButton=document.querySelector('.menu-toggle');
+    const menu=document.querySelector('.nav-links');
+    menuButton.addEventListener('click',()=>{
+      const expanded=menu.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded',String(expanded));
+      menuButton.textContent=expanded?'✕':'☰';
+    });
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+      menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰';
+    }));
   </script>
 </body>
 </html>

@@ -180,6 +180,53 @@
     @media(max-width:720px){.container{width:min(100% - 34px,1176px)}.section{padding:72px 0}.section-heading{align-items:flex-start;flex-direction:column;gap:14px}.hero-content{grid-template-columns:1fr;padding:75px 0 80px}.hero-content h1{font-size:clamp(3.5rem,12vw,5.5rem)}.profile-head{flex-direction:row;align-items:center}.profile-photo{width:136px;height:142px}.about-grid,.research-grid,.credentials-grid,.sports-layout,.contact-grid{grid-template-columns:1fr}.trust-inner{grid-template-columns:1fr 1fr;gap:17px;padding:22px 0}.trust-item:last-child{grid-column:span 2}.about-story,.facts,.research-card,.credential-card{padding:28px}.sports-feature{min-height:275px;padding:30px}.contact{padding:76px 0}.publication{flex-wrap:wrap}.status{margin-left:0}}
     @media(max-width:480px){h1{font-size:clamp(2.7rem,12vw,3.4rem)!important}.brand{font-size:.82rem}.brand-avatar{width:40px;height:40px}.actions .btn{width:100%}.profile-panel{padding:22px}.profile-head{gap:14px}.profile-photo{width:110px;height:124px}.profile-title{font-size:1.02rem}.profile-subtitle{font-size:.73rem}.trust-inner{grid-template-columns:1fr}.trust-item:last-child{grid-column:auto}.project-grid,.sports-skills,.social-grid{grid-template-columns:1fr}.project-grid article:last-child{grid-column:auto}.sports-feature .badge{margin-bottom:35px}.social-grid .social{min-height:50px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::before{animation:none}.btn,.project-card,.research-card,.social,.skill-card{transition:none}}
+
+    /* VERSION 3 — Self-managed certificate showcase */
+    .credentials{background:radial-gradient(ellipse at 87% 14%,rgba(202,187,252,.38),transparent 45%),linear-gradient(155deg,#f7f4ff,#f5f9ff 68%,#eef8f7)}
+    .credential-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:30px 0 23px}
+    .category-tabs{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .category-tab{cursor:pointer;border:1px solid #d7daee;background:rgba(255,255,255,.78);border-radius:100px;padding:10px 18px;font-weight:750;font-size:.82rem;color:#46516c;transition:background .2s,border-color .2s,color .2s}
+    .category-tab[aria-pressed="true"]{background:#192747;color:white;border-color:#192747;box-shadow:0 7px 16px rgba(37,43,105,.14)}
+    .category-tab:hover:not([aria-pressed="true"]){border-color:#8479df;color:#5a4cc6}
+    .certificate-counter{font-size:.78rem;font-weight:750;color:#656681}
+    .certificate-grid{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;min-height:190px}
+    .certificate-card{overflow:hidden;border:1px solid #e2e3f0;border-radius:20px;background:#fff;box-shadow:0 12px 35px rgba(27,37,71,.055);display:flex;flex-direction:column;min-width:0;transition:transform .23s,box-shadow .23s}
+    .certificate-card:hover{transform:translateY(-4px);box-shadow:0 22px 42px rgba(27,37,71,.12)}
+    .certificate-preview{height:202px;width:100%;background:linear-gradient(140deg,#e9eeff,#f5f1ff 60%,#dff6f1);display:grid;place-items:center;overflow:hidden;position:relative}
+    .certificate-preview img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#eef1f8}
+    .certificate-preview .pdf-art{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:7px;color:#6256a8}
+    .certificate-preview .pdf-art b{font-size:2.9rem;letter-spacing:-.13em;line-height:1}
+    .certificate-preview .pdf-art small{font-weight:780;font-size:.7rem;letter-spacing:.17em}
+    .certificate-body{padding:22px 22px 20px;flex:1;display:flex;flex-direction:column}
+    .category-label{width:max-content;max-width:100%;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;font-weight:860;color:#6a60c1;background:#f1efff;border-radius:100px;padding:5px 10px}
+    .category-label.sports{color:#916331;background:#fff2dd}
+    .category-label.research{color:#087e74;background:#e5faf6}
+    .certificate-body h3{font-size:1.03rem;line-height:1.35;margin:13px 0 7px;overflow-wrap:anywhere;letter-spacing:-.026em}
+    .certificate-meta{color:#657189;font-size:.79rem;line-height:1.6;margin:0 0 17px}
+    .certificate-open{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:830;color:#5946bd}
+    .certificate-open:hover{text-decoration:underline}
+    .certificate-empty{grid-column:1/-1;text-align:center;padding:45px 25px;background:rgba(255,255,255,.74);border:1px dashed #c4c7e4;border-radius:19px;color:#65718a;min-height:190px}
+    .certificate-empty strong{display:block;color:#243452;font-size:1.06rem;margin:9px 0}
+    .certificate-empty .empty-illustration{width:52px;height:52px;border-radius:16px;background:#ece9ff;color:#7469ce;display:grid;place-items:center;margin:0 auto;font-size:1.5rem}
+    .certificate-empty p{font-size:.85rem;max-width:520px;margin:0 auto}
+    .certificate-empty a{color:#5544bf;text-decoration:underline}
+    .manage-hint{position:relative;margin-top:24px;display:flex;align-items:flex-start;gap:13px;padding:15px 17px;border-radius:14px;border:1px solid #dcdaee;background:rgba(255,255,255,.54);color:#53617b;font-size:.83rem}
+    .manage-hint .manage-hint-icon{display:grid;place-items:center;flex:none;width:26px;height:26px;background:#ebe8fd;border-radius:9px;color:#6c5fc5;font-weight:850}
+    .manage-hint code{font-size:.76rem;color:#6353b7;overflow-wrap:anywhere}
+    .dynamic-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:27px}
+    .dynamic-card{padding:26px 28px;background:white;border:1px solid #e1e6f0;border-radius:17px;box-shadow:0 10px 31px rgba(26,43,70,.04)}
+    .dynamic-card h3{font-size:1.12rem;line-height:1.42;margin:12px 0 11px;letter-spacing:-.028em}
+    .dynamic-card p{font-size:.89rem;color:#627087;line-height:1.65;margin:0 0 14px}
+    .dynamic-card .dynamic-type{color:#6a5fc1;font-size:.68rem;letter-spacing:.14em;font-weight:860;text-transform:uppercase}
+    .dynamic-card a{font-weight:800;color:#584bb1;font-size:.84rem;text-decoration:underline;text-underline-offset:3px}
+    .dynamic-subtitle{font-size:.74rem;font-weight:830;text-transform:uppercase;letter-spacing:.13em;color:#7469b7;margin-top:38px}
+    .section-empty{background:#fff;border:1px dashed #cdd5e3;padding:24px;border-radius:15px;color:#66758d;font-size:.87rem;grid-column:1/-1}
+    .cv-link{display:none}
+    .cv-link.visible{display:inline-flex}
+    .contact .cv-link{background:transparent;color:#fff;border:1px solid rgba(196,214,241,.48)}
+    @media(max-width:980px){.certificate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:650px){.certificate-grid,.dynamic-list{grid-template-columns:1fr}.certificate-preview{height:220px}.certificate-toolbar{align-items:flex-start}.category-tab{padding:9px 14px}.dynamic-card{padding:24px}}
+    @media(prefers-reduced-motion:reduce){.certificate-card,.category-tab{transition:none}}
   </style>
 </head>
 <body>
@@ -261,18 +308,31 @@
           <article class="surface project-card"><div class="project-icon" aria-hidden="true">◎</div><h3>Visual intelligence</h3><p>Deep learning and computer vision for visual understanding.</p><span class="small-caption">Area of interest</span></article>
           <article class="surface project-card"><div class="project-icon" aria-hidden="true">⌁</div><h3>Spectral & sensor analytics</h3><p>Signal processing and machine learning applied to scientific data.</p><span class="small-caption">Area of interest</span></article>
         </div>
+        <div class="dynamic-subtitle">Selected projects · managed by GitHub</div>
+        <div class="dynamic-list" id="project-list" aria-live="polite"><div class="section-empty">Projects will be listed here once their details are added to the site data file.</div></div>
       </div>
     </section>
 
-    <!-- CERTIFICATES: real titles, issuers, dates, and files can replace these intentionally neutral empty states. -->
+    <!-- Self-managed certificate gallery. Upload images or PDFs to the category folders. -->
     <section class="section credentials" id="certificates">
       <div class="container">
-        <div class="section-heading"><div><div class="eyebrow">04 / Credentials & recognition</div><h2>Learning, backed by evidence.</h2></div><p>A dedicated space for authenticated academic certificates, training, competition awards, and sports achievements.</p></div>
-        <div class="credentials-grid">
-          <article class="credential-card"><div class="credential-head"><div class="credential-icon" aria-hidden="true">✧</div><h3>Academic & Research Certificates</h3></div><p>Courses, workshops, contests, research programs, and academic recognition belong here once their details are confirmed.</p><div class="empty-state"><span class="placeholder-icon" aria-hidden="true">▤</span><div><strong>Certificate gallery — to be added</strong><small>Add certificate title, issuing organization, year, and proof (image or PDF).</small></div></div></article>
-          <article class="credential-card"><div class="credential-head"><div class="credential-icon" aria-hidden="true">★</div><h3>Sports Certificates & Awards</h3></div><p>A showcase for verified athletic participation, competition results, medals, and team achievements.</p><div class="empty-state"><span class="placeholder-icon" aria-hidden="true">♧</span><div><strong>Sports records — to be added</strong><small>Add the sport, event, award or role, year, and certificate or photo.</small></div></div></article>
+        <div class="section-heading">
+          <div><div class="eyebrow">04 / Credentials & recognition</div><h2>Learning, backed by evidence.</h2></div>
+          <p>Certificates from academic learning, research experiences, and sport — displayed directly from my public GitHub repository.</p>
         </div>
-        <div class="credentials-tip"><span aria-hidden="true">i</span> Certificate records will be added with the original titles, dates, and supporting documents.</div>
+        <div class="credential-toolbar">
+          <div class="category-tabs" role="group" aria-label="Filter certificates by category">
+            <button class="category-tab" type="button" data-filter="all" aria-pressed="true">All certificates</button>
+            <button class="category-tab" type="button" data-filter="academic" aria-pressed="false">Academic</button>
+            <button class="category-tab" type="button" data-filter="research" aria-pressed="false">Research</button>
+            <button class="category-tab" type="button" data-filter="sports" aria-pressed="false">Sports</button>
+          </div>
+          <span class="certificate-counter" id="certificate-counter" aria-live="polite">Checking certificates…</span>
+        </div>
+        <div class="certificate-grid" id="certificate-grid" aria-live="polite" aria-busy="true">
+          <div class="certificate-empty"><div class="empty-illustration" aria-hidden="true">✧</div><strong>Loading certificate gallery</strong><p>Checking verified files from the portfolio repository.</p></div>
+        </div>
+        <div class="manage-hint"><span class="manage-hint-icon" aria-hidden="true">i</span><div>To add a certificate, upload its <strong>JPG, PNG, WEBP or PDF</strong> file to <code>certificates/academic</code>, <code>certificates/research</code>, or <code>certificates/sports</code> in the repository. Cards are generated automatically. Only share documents you are comfortable making public.</div></div>
       </div>
     </section>
 
@@ -283,19 +343,21 @@
           <div class="sports-feature"><div class="badge">Sport · Discipline · Growth</div><h3>Striving for progress, on and off the field.</h3><p>My sports activities are a part of my personal development alongside computing and research.</p></div>
           <div class="sports-skills"><div class="skill-card"><div class="skill-index">01 / MINDSET</div><h3>Discipline</h3><p>Building consistency through practice and commitment.</p></div><div class="skill-card"><div class="skill-index">02 / PEOPLE</div><h3>Teamwork</h3><p>Learning to collaborate and support shared goals.</p></div><div class="skill-card"><div class="skill-index">03 / CHALLENGES</div><h3>Resilience</h3><p>Staying focused when facing setbacks and competition.</p></div><div class="skill-card"><div class="skill-index">04 / GROWTH</div><h3>Sportsmanship</h3><p>Valuing fairness, respect, and continuous improvement.</p></div></div>
         </div>
+        <div class="dynamic-subtitle">Sports activities & achievements</div>
+        <div class="dynamic-list" id="sports-achievements" aria-live="polite"><div class="section-empty">Confirmed sports results and positions can be added here using the site's data file.</div></div>
       </div>
     </section>
 
     <section class="section publications" id="publications">
       <div class="container">
         <div class="section-heading"><div><div class="eyebrow">06 / Publications</div><h2>Academic contributions.</h2></div><p>Precise authorship, paper titles, and venue details will be displayed here once confirmed.</p></div>
-        <div class="surface publication"><div class="pub-icon" aria-hidden="true">↗</div><div><h3>Publication record to be added</h3><p>A publication has been reported; its title, coauthors, and venue details will be added after verification.</p></div><span class="status">Details pending</span></div>
+        <div class="dynamic-list" id="publication-list" aria-live="polite"><div class="section-empty">Publication details will appear here when confirmed bibliographic information is added. This avoids claiming unverified records.</div></div>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div class="container contact-grid">
-        <div><div class="eyebrow">07 / Contact</div><h2>Good work starts with a conversation.</h2><p>Open to thoughtful academic discussions, interdisciplinary learning, and opportunities for collaboration.</p><div class="actions"><a href="mailto:samin.y.tousib@gmail.com" class="btn btn-primary">Send an email <span aria-hidden="true">↗</span></a></div></div>
+        <div><div class="eyebrow">07 / Contact</div><h2>Good work starts with a conversation.</h2><p>Open to thoughtful academic discussions, interdisciplinary learning, and opportunities for collaboration.</p><div class="actions"><a href="mailto:samin.y.tousib@gmail.com" class="btn btn-primary">Send an email <span aria-hidden="true">↗</span></a><a href="assets/Samin_Yesar_Tousib_CV.pdf" class="btn cv-link" id="cv-link" target="_blank" rel="noopener noreferrer">View academic CV <span aria-hidden="true">↗</span></a></div></div>
         <div class="social-grid" aria-label="Academic and social profile links"><a class="social" href="https://github.com/SaminYesarTousib" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a class="social" href="https://orcid.org/0009-0007-6587-5181" target="_blank" rel="noopener noreferrer">ORCID <span>↗</span></a><a class="social" href="https://www.linkedin.com/in/samin-yesar-tousib-77a2183b0/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a><a class="social" href="https://www.researchgate.net/profile/Samin-Tousib" target="_blank" rel="noopener noreferrer">ResearchGate <span>↗</span></a></div>
       </div>
     </section>
@@ -313,6 +375,189 @@
     menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
       menu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰';
     }));
+  </script>
+
+  <script>
+    /* Portfolio content manager. No server, login, tokens or build process required.
+       Certificates are listed from the public GitHub API, so uploading a file to a
+       category folder automatically creates a certificate card after deploy/cache refresh. */
+    (() => {
+      'use strict';
+      const REPO = 'SaminYesarTousib/SaminYesarTousib.github.io';
+      const CATEGORIES = ['academic', 'research', 'sports'];
+      const SUPPORTED = /\.(pdf|png|jpe?g|webp|gif)$/i;
+      const IMAGE_FILE = /\.(png|jpe?g|webp|gif)$/i;
+      const gallery = document.getElementById('certificate-grid');
+      const counter = document.getElementById('certificate-counter');
+      const tabs = Array.from(document.querySelectorAll('.category-tab'));
+      let certificates = [];
+      let selectedCategory = 'all';
+      let loadErrors = [];
+
+      function el(tag, className, txt) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (txt != null) node.textContent = String(txt);
+        return node;
+      }
+
+      function isWebUrl(value) {
+        try { const x = new URL(value); return x.protocol === 'https:' || x.protocol === 'http:'; }
+        catch (_) { return false; }
+      }
+
+      function titleFromFile(name) {
+        const base = name.replace(/\.[^.]+$/, '');
+        const fields = base.split('__').map(t => t.replace(/[_-]+/g, ' ').trim()).filter(Boolean);
+        let year = '', title = '', issuer = '';
+        if (fields.length > 1 && /^\d{4}$/.test(fields[0])) {
+          year = fields[0]; title = fields[1]; issuer = fields.slice(2).join(' · ');
+        } else {
+          title = base.replace(/[_-]+/g, ' ').replace(/\s+/g, ' ').trim();
+          if (/^\d{4}\s/.test(title)) {year=title.slice(0,4); title=title.slice(5);}
+        }
+        return {title: title || 'Certificate', issuer, year};
+      }
+
+      function emptyCard(title, detail) {
+        const wrap = el('div', 'certificate-empty');
+        const icon = el('div','empty-illustration','✧'); icon.setAttribute('aria-hidden', 'true');
+        wrap.append(icon, el('strong','',title), el('p','',detail));
+        return wrap;
+      }
+
+      function buildCertificate(item) {
+        const card = el('article', 'certificate-card');
+        const preview = el('div','certificate-preview');
+        const link = el('a','certificate-open','View certificate ↗');
+        link.href = item.url; link.target='_blank'; link.rel='noopener noreferrer';
+        if (IMAGE_FILE.test(item.name)) {
+          const img = el('img'); img.src=item.url; img.alt=`Preview of ${item.title}`; img.loading='lazy';
+          img.addEventListener('error', () => {
+            preview.replaceChildren(el('div','pdf-art','Image preview unavailable'));
+          }, {once:true});
+          preview.append(img);
+        } else {
+          const pdf=el('div','pdf-art'); pdf.append(el('b','','▤'), el('small','','PDF CERTIFICATE')); preview.append(pdf);
+        }
+        const info = el('div','certificate-body');
+        info.append(el('span',`category-label ${item.category}`,item.category),el('h3','',item.title));
+        const meta=[item.issuer, item.year].filter(Boolean).join(' · ');
+        if (meta) info.append(el('p','certificate-meta',meta));
+        info.append(link);card.append(preview,info);
+        return card;
+      }
+
+      function showCertificates() {
+        const visible = selectedCategory === 'all' ? certificates : certificates.filter(x => x.category===selectedCategory);
+        gallery.replaceChildren();
+        counter.textContent = `${certificates.length} certificate${certificates.length===1?'':'s'} in portfolio`;
+        if (!visible.length) {
+          const msg = loadErrors.length && !certificates.length
+            ? ['Gallery temporarily unavailable','GitHub could not return the certificate folders right now. Refresh the site later.']
+            : ['No certificates in this category yet','When a certificate is uploaded to the matching GitHub folder, it will be listed here automatically.'];
+          gallery.append(emptyCard(...msg));
+        } else {
+          visible.forEach(item=>gallery.append(buildCertificate(item)));
+        }
+        gallery.setAttribute('aria-busy','false');
+      }
+
+      tabs.forEach(tab=>tab.addEventListener('click',()=>{
+        selectedCategory=tab.dataset.filter;
+        tabs.forEach(btn=>btn.setAttribute('aria-pressed',String(btn===tab)));
+        showCertificates();
+      }));
+
+      // Optional metadata overrides. Completely optional: filenames alone work.
+      // Format: [{"path":"certificates/sports/example.jpg","title":"...","issuer":"...","year":"2026"}]
+      async function getOverrides() {
+        try {
+          const response = await fetch('data/certificates.json', {cache:'no-store'});
+          if (!response.ok) return {};
+          const list=await response.json();
+          if (!Array.isArray(list)) return {};
+          return Object.fromEntries(list.filter(x=>x && typeof x.path==='string').map(x=>[x.path,x]));
+        } catch (_) {return {};}
+      }
+
+      async function fetchCategory(category, overrides) {
+        const url=`https://api.github.com/repos/${REPO}/contents/certificates/${category}?ref=main`;
+        const response=await fetch(url,{headers:{'Accept':'application/vnd.github+json'}});
+        if (response.status===404) return [];
+        if (!response.ok) throw new Error(`GitHub API: ${response.status}`);
+        const files=await response.json();
+        if (!Array.isArray(files)) return [];
+        return files.filter(x=>x.type==='file' && SUPPORTED.test(x.name))
+          .map(x=>{
+            const extracted=titleFromFile(x.name);
+            const meta=overrides[x.path] || {};
+            return {category,name:x.name,path:x.path,
+              title:String(meta.title || extracted.title),
+              issuer:String(meta.issuer || extracted.issuer),
+              year:String(meta.year || extracted.year),
+              url:x.download_url || `https://raw.githubusercontent.com/${REPO}/main/${x.path.split('/').map(encodeURIComponent).join('/')}`};
+          }).filter(x=>isWebUrl(x.url));
+      }
+
+      async function loadCertificates() {
+        const overrides=await getOverrides();
+        const results=await Promise.allSettled(CATEGORIES.map(cat=>fetchCategory(cat,overrides)));
+        loadErrors=[];
+        certificates=[];
+        results.forEach((result,i)=>{
+          if (result.status==='fulfilled') certificates.push(...result.value);
+          else loadErrors.push(CATEGORIES[i]);
+        });
+        certificates.sort((a,b)=>{
+          const numDiff=(Number(b.year)||0)-(Number(a.year)||0);
+          return numDiff || a.title.localeCompare(b.title);
+        });
+        showCertificates();
+      }
+
+      // Text/data cards for the other self-editable sections.
+      function safeText(value, fallback='') {return typeof value==='string' ? value : fallback;}
+      async function getData(file) {
+        try {
+          const response=await fetch(`data/${file}.json`,{cache:'no-store'});
+          if (!response.ok) return [];
+          const json=await response.json(); return Array.isArray(json) ? json : [];
+        } catch (_) {return [];}
+      }
+      function renderDataCards(targetId, entries, kind) {
+        const target=document.getElementById(targetId);
+        if (!target || !entries.length) return;
+        target.replaceChildren();
+        entries.filter(row=>row && typeof row.title==='string' && row.title.trim()).forEach(entry=>{
+          const card=el('article','dynamic-card');
+          card.append(el('div','dynamic-type',safeText(entry.category,kind)));
+          card.append(el('h3','',entry.title));
+          const meta=[entry.organization,entry.venue,entry.year].map(x=>safeText(x)).filter(Boolean);
+          if (meta.length) card.append(el('p','',meta.join(' · ')));
+          const desc=safeText(entry.description);
+          if (desc) card.append(el('p','',desc));
+          if (isWebUrl(entry.url)) {
+            const a=el('a','',safeText(entry.linkLabel,'View details ↗'));
+            a.href=entry.url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
+          }
+          target.append(card);
+        });
+      }
+      async function loadData() {
+        const [projects,pubs,sports]=await Promise.all([getData('projects'),getData('publications'),getData('sports')]);
+        renderDataCards('project-list',projects,'Project');
+        renderDataCards('publication-list',pubs,'Publication');
+        renderDataCards('sports-achievements',sports,'Athletics');
+      }
+      async function checkCV() {
+        try {
+          const response = await fetch('assets/Samin_Yesar_Tousib_CV.pdf',{method:'HEAD'});
+          if (response.ok) document.getElementById('cv-link').classList.add('visible');
+        } catch (_) {}
+      }
+      loadCertificates(); loadData(); checkCV();
+    })();
   </script>
 </body>
 </html>
